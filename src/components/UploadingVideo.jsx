@@ -23,8 +23,8 @@ function UploadingVideo({
 
     return (
         <>
-            <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-70 z-50">
-                <div className="w-96 p-3 text-white border outline-none rounded-lg space-y-5 border-slate-700 bg-black">
+            <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-[#F7F7F7]  dark:bg-[#181818] bg-opacity-70 z-50">
+                <div className="w-96 p-3 text-black dark:text-white border outline-none rounded-lg space-y-5 border-slate-700 bg-[#F7F7F7]  dark:bg-[#181818]">
                     <div className="flex items-start justify-between">
                         <div>
                             {uploaded ? (
@@ -36,7 +36,7 @@ function UploadingVideo({
                                     Uploading Video...
                                 </h1>
                             )}
-                            <span className="text-xs text-slate-400">
+                            <span className="text-xs text-slate-900 dark:text-slate-400">
                                 Track your video uploading process.
                             </span>
                         </div>

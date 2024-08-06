@@ -10,21 +10,21 @@ function Edit({ initialContent, onCancel, onSave }) {
     return (
         <div className="w-full text-sm">
             <input
-                className="bg-[#222222] outline-none border-b w-3/4 p-2"
+                className="bg-[#DCDCDC] dark:bg-[#222222] outline-none border-b w-3/4 p-2"
                 value={editedContent}
                 autoFocus
                 onChange={(e) => setEditedContent(e.target.value)}
             />
             <div className="space-x-4 mt-3 w-3/4 inline-flex justify-end items-center">
                 <span
-                    className="bg-[#222222] py-1 px-3 font-normal rounded-lg hover:bg-black cursor-pointer"
+                    className="bg-[#DCDCDC] dark:bg-[#222222] py-1 px-3 font-normal rounded-lg hover:bg-[#F7F7F7]  dark:bg-[#181818] cursor-pointer"
                     onClick={onCancel}
                 >
                     Cancel
                 </span>
                 <button
                     onClick={handleSave}
-                    className="bg-[#222222] py-1 px-3 font-normal rounded-lg hover:bg-black cursor-pointer"
+                    className="bg-[#DCDCDC] dark:bg-[#222222] py-1 px-3 font-normal rounded-lg hover:bg-[#F7F7F7]  dark:bg-[#181818] cursor-pointer"
                 >
                     Save
                 </button>

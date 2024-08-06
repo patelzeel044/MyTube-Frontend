@@ -23,7 +23,7 @@ function VideoList({
         <> 
         <div className=" sm:p-2">
             <div
-                className="w-full bg-[#252525] cursor-pointer"
+                className="w-full bg-[#F0F0F0] dark:bg-[#252525] cursor-pointer"
                 onClick={() => navigate(`/watch/${videoId}`)}
             >
                 <div className="relative sm:h-60 h-48">
@@ -31,7 +31,7 @@ function VideoList({
                         src={thumbnail}
                         className="object-cover w-full h-full"
                     />
-                    <span className="absolute bottom-2 right-2 rounded-lg text-sm bg-black py-1 px-2">
+                    <span className="absolute bottom-2 right-2 rounded-lg text-sm bg-[#F7F7F7]  dark:bg-[#181818] py-1 px-2">
                         {formatDuration(duration)}
                     </span>
                 </div>
@@ -46,7 +46,7 @@ function VideoList({
                     )}
                     <div>
                         <h2 className="font-medium">{title}</h2>
-                        <div className="text-xs space-x-1 text-slate-400">
+                        <div className="text-xs space-x-1 text-slate-900 dark:text-slate-400">
                             <span>{views} Views</span> .
                             <span>{timeAgo(createdAt)}</span>
                         </div>

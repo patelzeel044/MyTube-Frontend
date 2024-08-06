@@ -37,7 +37,7 @@ import LoginPopup from "./LoginPopup ";
 import AuthLayout from "./AuthLayout";
 import InfiniteScroll from "./InfiniteScroll"
 import SearchForSmallScreen from "./SearchForSmallScreen";
-
+import ToggleDarkMode from "./ToggleDarkMode"
 export {
     Button,
     Container,
@@ -77,5 +77,7 @@ export {
     LoginPopup,
     AuthLayout,
     InfiniteScroll,
-    SearchForSmallScreen
+    SearchForSmallScreen,
+    ToggleDarkMode
 };
+ 

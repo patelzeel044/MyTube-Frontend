@@ -41,18 +41,18 @@ function EditAvatar({ cover, preImage }) {
                     onClick={() => setIsOpen((prev) => !prev)}
                 />
                 {isOpen && (
-                    <div className="fixed z-50 top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-70">
-                        <div className="bg-black p-8 relative border shadow-lg w-full max-w-md">
+                    <div className="fixed z-50 top-0 left-0 w-full h-full flex justify-center items-center bg-[#F7F7F7]  dark:bg-[#181818] bg-opacity-70">
+                        <div className="bg-[#F7F7F7]  dark:bg-[#181818] p-8 relative border shadow-lg w-full max-w-md">
                             {/* Close button */}
                             <button
-                                className="absolute top-5 right-5 text-white hover:text-gray-200"
+                                className="absolute top-5 right-5 text-black dark:text-white hover:text-gray-200"
                                 onClick={() => setIsOpen(false)}
                             >
                                 <MdClose size={20} />
                             </button>
 
                             {/* Content */}
-                            <h2 className="text-lg font-bold text-white mb-4">
+                            <h2 className="text-lg font-bold text-black dark:text-white mb-4">
                                 Change {cover ? "Cover" : "Profile"} Picture
                             </h2>
                             <div className="flex flex-col items-center">
@@ -62,13 +62,13 @@ function EditAvatar({ cover, preImage }) {
                                     cameraIcon
                                     cameraSize={30}
                                     className={
-                                        "w-full h-full object-contain min-h-20 max-h-60 bg-[#222222]"
+                                        "w-full h-full object-contain min-h-20 max-h-60 bg-[#DCDCDC] dark:bg-[#222222]"
                                     }
                                     image={preImage}
                                 />
                                 <button
                                     type="submit"
-                                    className="bg-blue-500 text-white px-4 py-2 mt-4 w-full"
+                                    className="bg-blue-500 text-black dark:text-white px-4 py-2 mt-4 w-full"
                                 >
                                     Upload
                                 </button>

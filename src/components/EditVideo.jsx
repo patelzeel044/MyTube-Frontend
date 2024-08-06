@@ -51,7 +51,7 @@ function EditVideo({
     if (uploading) {
         return (
             <>
-                <div className="w-52 border border-slate-600 bg-black flex gap-2 p-3">
+                <div className="w-52 border border-slate-600 bg-[#F7F7F7]  dark:bg-[#181818] flex gap-2 p-3">
                     <Spinner />
                     <span className="text-md font-bold">Updating video...</span>
                 </div>
@@ -61,12 +61,12 @@ function EditVideo({
 
     return (
         <>
-            <div className="fixed mt-5 top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-70 z-50">
+            <div className="fixed mt-5 top-0 left-0 w-full h-full flex justify-center items-center bg-[#F7F7F7]  dark:bg-[#181818] bg-opacity-70 z-50">
                 <form
                     onSubmit={handleSubmit(updateVideo)}
-                    className=" bg-black space-y-2 border h-[30rem] overflow-y-scroll outline-none p-2"
+                    className=" bg-[#F7F7F7]  dark:bg-[#181818] space-y-2 border h-[30rem] overflow-y-scroll outline-none p-2"
                 >
-                    <div className="sticky left-0 top-0 z-50 bg-[#222222] flex justify-between items-center border-b border-slate-500 px-3 py-1">
+                    <div className="sticky left-0 top-0 z-50 bg-[#DCDCDC] dark:bg-[#222222] flex justify-between items-center border-b border-slate-500 px-3 py-1">
                         <div>
                             <h2 className="font-bold">Edit Video</h2>
                             <p className="text-xs mb-2">
@@ -113,7 +113,7 @@ function EditVideo({
                                 <label>Description *</label>
                                 <textarea
                                     rows="4"
-                                    className="focus:bg-[#222222] text-sm overflow-y-scroll bg-transparent outline-none border w-full mt-1 p-1"
+                                    className="focus:bg-[#DCDCDC] dark:bg-[#222222] text-sm overflow-y-scroll bg-transparent outline-none border w-full mt-1 p-1"
                                     {...register("description", {
                                         required: "Description is required",
                                     })}

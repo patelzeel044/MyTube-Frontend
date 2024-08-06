@@ -42,7 +42,7 @@ function SignUp() {
 
     return (
         <>
-            <div className="w-full h-screen text-white p-3 flex justify-center items-start sm:mt-8">
+            <div className="w-full h-screen text-black dark:text-white p-3 flex justify-center items-start sm:mt-8">
                 <div className="flex flex-col space-y-2 justify-center items-center border border-slate-600 p-3">
                     <div className="flex items-center gap-2">
                         <Logo />
@@ -51,7 +51,7 @@ function SignUp() {
                         onSubmit={handleSubmit(submit)}
                         className="space-y-4 p-2 text-sm sm:w-96 w-full"
                     >
-                        <div className="w-full relative h-28 bg-[#222222]">
+                        <div className="w-full relative h-28 bg-[#DCDCDC] dark:bg-[#222222]">
                             <div className="w-full h-full">
                                 <GetImagePreview
                                     name="coverImage"
@@ -73,37 +73,6 @@ function SignUp() {
                                 />
                             </div>
 
-                            {/* <label
-                                htmlFor="avatar"
-                                className="cursor-pointer"
-                            >
-                                <div className="absolute h-24 w-24 left-2 bottom-2 flex justify-center items-center">
-                                    <img
-                                        src={avatarPreview}
-                                        className=" object-cover w-full h-full border-2 border-double rounded-full"
-                                    />
-                                    <FaCamera
-                                        className="absolute hover:text-blue-500"
-                                        size={20}
-                                    />
-                                </div>
-                                <Controller
-                                    name="avatar"
-                                    control={control}
-                                    render={({ field: { onChange } }) => (
-                                        <input
-                                            id="avatar"
-                                            type="file"
-                                            className="hidden"
-                                            accept="image/png, image/jpeg"
-                                            onChange={(e) => {
-                                                onChange(handleAvatarChange(e));
-                                            }}
-                                        />
-                                    )}
-                                    rules={{ required: "avatar is required" }}
-                                />
-                            </label> */}
                         </div>
                         {errors.avatar && (
                             <div className="text-red-500">

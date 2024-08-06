@@ -51,13 +51,13 @@ function UploadVideo({ setUploadVideoPopup }) {
 
     return (
         <>
-            <div className="fixed top-5 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-70 z-30">
-                <div className="relative w-[95vw] sm:w-3/4 h-[80vh] sm:h-[80vh] mx-auto text-white border overflow-y-scroll bg-black">
+            <div className="fixed top-5 left-0 w-full h-full flex justify-center items-center bg-[#F7F7F7]  dark:bg-[#181818] bg-opacity-70 z-30">
+                <div className="relative w-[95vw] sm:w-3/4 h-[80vh] sm:h-[80vh] mx-auto text-black dark:text-white border overflow-y-scroll bg-[#F7F7F7]  dark:bg-[#181818]">
                     <form
                         onSubmit={handleSubmit(publishVideo)}
                         className="space-y-5"
                     >
-                        <section className="h-12 sticky top-0 z-50 border-b w-full bg-[#222222] flex justify-between items-center px-3">
+                        <section className="h-12 sticky top-0 z-50 border-b w-full bg-[#DCDCDC] dark:bg-[#222222] flex justify-between items-center px-3">
                             <div className="flex gap-1 items-center cursor-pointer">
                                 <IoCloseCircleOutline
                                     size={23}
@@ -109,7 +109,7 @@ function UploadVideo({ setUploadVideoPopup }) {
                                     })}
                                 />
                                 <input
-                                    className="sm:w-3/4 w-full text-center h-10 bg-transparent text-white outline-none"
+                                    className="sm:w-3/4 w-full text-center h-10 bg-transparent text-black dark:text-white outline-none"
                                     value={videoName}
                                     readOnly
                                 ></input>
@@ -154,7 +154,7 @@ function UploadVideo({ setUploadVideoPopup }) {
                                         <label>Description *</label>
                                         <textarea
                                             rows="5"
-                                            className="focus:bg-[#222222] bg-transparent outline-none border w-full mt-1 p-1"
+                                            className="focus:bg-[#DCDCDC] dark:bg-[#222222] bg-transparent outline-none border w-full mt-1 p-1"
                                             {...register("description", {
                                                 required:
                                                     "Description is required",

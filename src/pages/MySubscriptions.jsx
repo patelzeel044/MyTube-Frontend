@@ -19,7 +19,7 @@ function MySubscriptions() {
     
     return (
         <>
-            <div className="flex flex-col p-2 -space-y-3 text-white border-slate-500 border-b-2 bg-[#222222]">
+            <div className="flex flex-col p-2 -space-y-3 text-black dark:text-white border-slate-500 border-b-2 bg-[#DCDCDC] dark:bg-[#222222]">
                 <div className="flex items-center">
                 {subscriptions?.map((subscription) => (
                     <div
@@ -44,7 +44,7 @@ function MySubscriptions() {
                 
             </div>
 
-           { <div className="text-white mb-20 sm:mb-0 w-full grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 overflow-y-scroll">
+           { <div className="text-black dark:text-white mb-20 sm:mb-0 w-full grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 overflow-y-scroll">
                 {videos?.map((video) => (
                     <Link
                         to={`/watch/${video?._id}`}

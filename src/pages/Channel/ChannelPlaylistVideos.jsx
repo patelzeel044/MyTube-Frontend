@@ -29,7 +29,7 @@ function ChannelPlaylistVideos() {
         <>
             
             <div 
-        className="flex border-b-2 border-slate-500 px-3 py-1 justify-between font-extrabold items-center text-white"
+        className="flex border-b-2 border-slate-500 px-3 py-1 justify-between font-extrabold items-center text-black dark:text-white"
         >   
             <div className="flex">
                 {playlist?.owner?.avatar && (
@@ -48,7 +48,7 @@ function ChannelPlaylistVideos() {
                <div>Videos : {playlist?.totalVideos}</div>
             </div>
             {/* Video listing */}
-            <div className="grid lg:grid-cols-3 sm:grid-cols-2 text-white">
+            <div className="grid lg:grid-cols-3 sm:grid-cols-2 text-black dark:text-white">
                 {playlist?.videos?.map((video) => (
                     <VideoList
                         key={video._id}

@@ -47,7 +47,7 @@ function SearchVideos() {
                 className="w-full h-10 flex items-center font-bold justify-end cursor-pointer px-8"
                 onClick={() => setFilterOpen((prev) => !prev)}
             >
-                <span className="text-white hover:text-blue-500">
+                <span className="text-black dark:text-white hover:text-blue-500">
                     Filters
                 </span>
                 <FaFilter
@@ -55,10 +55,10 @@ function SearchVideos() {
                     className="text-blue-500 hover:text-blue-800"
                 />
             </div>
-            <div className="w-full text-white">
+            <div className="w-full text-black dark:text-white">
                 {filterOpen && (
                     <div className="w-full absolute bg-transparent">
-                        <div className="max-w-sm border border-slate-800 rounded bg-[#222222] fixed mx-auto z-50 inset-x-0 h-96 p-5">
+                        <div className="max-w-sm border border-slate-800 rounded bg-[#DCDCDC] dark:bg-[#222222] fixed mx-auto z-50 inset-x-0 h-96 p-5">
                             <h1 className="font-semibold text-lg">
                                 Search filters
                             </h1>
@@ -71,7 +71,7 @@ function SearchVideos() {
                                 <tr className="w-full text-start border-b">
                                     <th>SortBy</th>
                                 </tr>
-                                <tr className="flex flex-col gap-2 text-slate-400 cursor-pointer">
+                                <tr className="flex flex-col gap-2 text-slate-900 dark:text-slate-400 cursor-pointer">
                                     <td
                                         onClick={() =>
                                             handleSortParams(
@@ -140,7 +140,7 @@ function SearchVideos() {
                         </div>
                     </div>
                 )}
-                <div className="grid h-screen xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 text-white overflow-y-scroll">
+                <div className="grid h-screen xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 text-black dark:text-white overflow-y-scroll">
                     {videos &&
                         videos?.docs?.map((video) => (
                             <VideoList

@@ -8,6 +8,7 @@ import tweetReducer from "./Slices/tweetSlice.js";
 import commentReducer from "./Slices/commentSlice.js";
 import dashboardReducer from "./Slices/dashboard.js";
 import playlistReducer from "./Slices/playlistSlice.js";
+import themeReducer from "./Slices/themeSlice.js";
 
 const store = configureStore({
     reducer: {
@@ -19,7 +20,8 @@ const store = configureStore({
         tweet: tweetReducer,
         comment: commentReducer,
         dashboard: dashboardReducer,
-        playlist: playlistReducer
+        playlist: playlistReducer,
+        theme: themeReducer,
     }
 });
 

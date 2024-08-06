@@ -8,7 +8,7 @@ function ChannelNavigate({ username, edit }) {
     if (edit) {
         return (
             <>
-                <section className="text-white text-center w-full flex justify-evenly items-center border-b-2 border-slate-600 text-xs sm:text-base sm:mt-4 md:mt-0 mt-2">
+                <section className="text-black dark:text-white text-center w-full flex justify-evenly items-center border-b-2 border-slate-600 text-xs sm:text-base sm:mt-4 md:mt-0 mt-2">
                     <NavLink
                         to={`/edit/personalInfo`}
                         className={({ isActive }) =>
@@ -36,7 +36,7 @@ function ChannelNavigate({ username, edit }) {
     return (
         <>
             {/* channel options */}
-            <section className="text-white w-full flex justify-evenly items-center border-b-2 border-slate-600 text-sm sm:text-base sm:mt-4 md:mt-0 mt-2">
+            <section className="text-black dark:text-white w-full flex justify-evenly items-center border-b-2 border-slate-600 text-sm sm:text-base sm:mt-4 md:mt-0 mt-2">
                 <NavLink
                     to={`/channel/${username}/videos`}
                     className={({ isActive }) =>

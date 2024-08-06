@@ -31,7 +31,7 @@ function EditPersonalInfo() {
 
     return (
         <>
-            <div className="w-full text-white flex justify-center items-center mt-5">
+            <div className="w-full text-black dark:text-white flex justify-center items-center mt-5">
                 <div className="bg-transparent p-5 border rounded shadow-lg w-full max-w-md">
                     <h2 className="text-lg font-bold mb-4">
                         Personal Information
@@ -76,13 +76,13 @@ function EditPersonalInfo() {
                         <div className="flex justify-between mt-4">
                             <Button
                                 onClick={(e) => reset(e)}
-                                className="bg-gray-500 text-white px-4 py-2 rounded"
+                                className="bg-gray-500 text-black dark:text-white px-4 py-2 rounded"
                             >
                                 Reset
                             </Button>
                             <Button
                                 type="submit"
-                                className="bg-blue-500 text-white px-4 py-2 rounded"
+                                className="bg-blue-500 text-black dark:text-white px-4 py-2 rounded"
                             >
                                 Save Changes
                             </Button>

@@ -27,7 +27,7 @@ function ChangePassword() {
     };
 
     return (
-        <div className="w-full text-white flex justify-center items-center mt-2">
+        <div className="w-full text-black dark:text-white flex justify-center items-center mt-2">
             <div className="bg-transparent p-8 border rounded shadow-lg w-full max-w-md">
                 <h2 className="text-lg font-bold mb-4">Change Password</h2>
                 <form
@@ -92,7 +92,7 @@ function ChangePassword() {
                     <div className="flex justify-center mt-4">
                         <Button
                             type="submit"
-                            className="bg-blue-500 text-white px-4 py-2 rounded"
+                            className="bg-blue-500 text-black dark:text-white px-4 py-2 rounded"
                         >
                             Change Password
                         </Button>

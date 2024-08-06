@@ -6,7 +6,7 @@ function LoginSkeleton() {
     return (
         <>
             <div className="flex justify-center mt-20 w-full">
-                <div className="border border-slate-500 h-96 w-96  text-center text-white font-bold text-xl p-5 space-y-8">
+                <div className="border border-slate-500 h-96 w-96  text-center text-black dark:text-white font-bold text-xl p-5 space-y-8">
                     <h1>Registering...</h1>
                     <input className={`${loadingSkeletonStyle} outline-none`} readOnly/>
                     <input className={`${loadingSkeletonStyle} outline-none`} readOnly/>

@@ -8,7 +8,7 @@ function HeaderSection({ username, setPopUp }) {
                 <h1 className="sm:text-2xl text-xl font-bold">
                     Welcome Back, {username}{" "}
                 </h1>
-                <p className="text-xs text-slate-400 ">
+                <p className="text-xs text-slate-900 dark:text-slate-400">
                 MY Studio : Manage, analyze, and optimize your content effortlessly.
                 </p>
             </div>

@@ -64,7 +64,7 @@ function VideoDetail() {
                 videoId={video?._id}
                 channelId={video?.owner?._id}
             />
-            <div className="text-white font-semibold sm:px-5 px-3">
+            <div className="text-black dark:text-white font-semibold sm:px-5 px-3">
                 {totalComments} Comments
             </div>
             <TweetAndComment

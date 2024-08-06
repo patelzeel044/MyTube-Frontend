@@ -6,12 +6,12 @@ function Logo({ size = "30" }) {
     return (
         <>
             <Link to={'/'} className="flex gap-1 items-center">
-            <span className="font-extrabold text-white">MY</span>
+            <span className="font-extrabold text-black dark:text-white">MY</span>
                 <IoLogoYoutube
                     size={size}
                     color="#3b82f6"
                 />
-            <span className="font-extrabold text-white">Tube</span>
+            <span className="font-extrabold text-black dark:text-white">Tube</span>
             </Link>
         </>
     );

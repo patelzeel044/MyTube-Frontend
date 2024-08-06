@@ -36,7 +36,7 @@ function ChannelPlaylist() {
 
     return (
         <>
-            <div className="w-full relative text-white sm:px-5 px-0">
+            <div className="w-full relative text-black dark:text-white sm:px-5 px-0">
                 {playlists?.length == 0 && (
                     <div className="text-center h-[5rem] flex justify-center items-center">
                         <h1>No Playlist Found</h1>
@@ -55,8 +55,8 @@ function ChannelPlaylist() {
                     </div>
                 )}
                 {openCreatePlaylist && (
-                    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-transparent z-40">
-                        <div className="relative w-full max-w-sm border bg-black">
+                    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-[#F7F7F7]  dark:bg-[#181818] bg-transparent z-40">
+                        <div className="relative w-full max-w-sm border bg-[#F7F7F7]  dark:bg-[#181818]">
                             <form
                                 onSubmit={handleSubmit(createPlaylist)}
                                 className="w-full space-y-5 p-4"

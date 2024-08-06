@@ -29,7 +29,7 @@ function ChannelVideos() {
     return (
         <>
             {/* For sorting latest, popular and oldest videos */}
-            <div className="w-full p-2 text-white flex gap-4">
+            <div className="w-full p-2 text-black dark:text-white flex gap-4">
                 <button
                     onClick={() => {
                         setActiveButton("button1");
@@ -38,7 +38,7 @@ function ChannelVideos() {
                     className={`group py-1 px-2 rounded-md ${
                         activeButton === "button1"
                             ? "bg-blue-500"
-                            : "bg-[#222222]"
+                            : "bg-[#DCDCDC] dark:bg-[#222222]"
                     }`}
                 >
                     Latest
@@ -51,7 +51,7 @@ function ChannelVideos() {
                     className={`group py-1 px-2 rounded-md ${
                         activeButton === "button2"
                             ? "bg-blue-500"
-                            : "bg-[#222222]"
+                            : "bg-[#DCDCDC] dark:bg-[#222222]"
                     }`}
                 >
                     Popular
@@ -64,14 +64,14 @@ function ChannelVideos() {
                     className={`group py-1 px-2 rounded-md ${
                         activeButton === "button3"
                             ? "bg-blue-500"
-                            : "bg-[#222222]"
+                            : "bg-[#DCDCDC] dark:bg-[#222222]"
                     }`}
                 >
                     Oldest
                 </button>
             </div>
             {/* Video listing */}
-            <div className="grid lg:grid-cols-3 sm:grid-cols-2 text-white">
+            <div className="grid lg:grid-cols-3 sm:grid-cols-2 text-black dark:text-white">
                 {videos?.map((video) => (
                     <VideoList
                         key={video._id}

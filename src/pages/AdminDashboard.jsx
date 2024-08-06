@@ -52,7 +52,7 @@ function AdminDashboard() {
         <>
             <Navbar />
             <Container>
-                <div className=" w-full relative h-screen text-white space-y-5 z-10 py-4 px-1">
+                <div className=" w-full relative h-screen text-black dark:text-white space-y-5 z-10 py-4 px-1">
                     {/* uploadVideoPopup */}
                     {popUp.uploadVideo && (
                         <UploadVideo setUploadVideoPopup={setPopUp} />
@@ -88,7 +88,7 @@ function AdminDashboard() {
 
                     {deleting && (
                         <div className="w-full fixed top-20 flex justify-center z-20">
-                            <div className="w-52 border border-slate-600 bg-black flex gap-2 p-3">
+                            <div className="w-52 border border-slate-600 bg-[#F7F7F7]  dark:bg-[#181818] flex gap-2 p-3">
                                 <Spinner />
                                 <span className="text-md font-bold">
                                     Deleting video...

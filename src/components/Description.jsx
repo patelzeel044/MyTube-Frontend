@@ -37,20 +37,20 @@ function Description({
     
     return (
         <>
-            <section className="sm:max-w-4xl w-full text-white sm:p-5 p-2 space-y-2">
+            <section className="sm:max-w-4xl w-full text-black dark:text-white sm:p-5 p-2 space-y-2">
                 <div className="border-b border-slate-700">
                     <div className="space-y-2 mb-2">
                         <h1 className="sm:text-2xl font-semibold">{title}</h1>
                         <div className="flex items-center justify-between sm:justify-start sm:gap-5">
                             <div>
-                                <span className="text-sm text-slate-400">
+                                <span className="text-sm text-slate-900 dark:text-slate-400">
                                     {views} views .{" "}
                                 </span>
-                                <span className="text-sm text-slate-400">
+                                <span className="text-sm text-slate-900 dark:text-slate-400">
                                     {timeAgo(createdAt)}
                                 </span>
                             </div>
-                            <div className=" rounded-full w-24 flex justify-center bg-[#222222] py-1">
+                            <div className=" rounded-full w-24 flex justify-center bg-[#DCDCDC] dark:bg-[#222222] py-1">
                                 <Like
                                     isLiked={isLiked}
                                     videoId={videoId}
@@ -72,7 +72,7 @@ function Description({
                                     <h1 className="font-semibold">
                                         {channelName}
                                     </h1>
-                                    <p className="text-xs text-slate-400">
+                                    <p className="text-xs text-slate-900 dark:text-slate-400">
                                         {localSubscribersCount} Subscribers
                                     </p>
                                 </div>
@@ -90,7 +90,7 @@ function Description({
                         </div>
                     </div>
                 </div>
-                <p className="text-xs bg-[#222222] break-words rounded-lg p-2 outline-none">
+                <p className="text-xs bg-[#DCDCDC] dark:bg-[#222222] break-words rounded-lg p-2 outline-none">
                     {description}
                 </p>
             </section>

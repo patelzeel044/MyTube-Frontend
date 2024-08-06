@@ -17,9 +17,9 @@ function EditChannel() {
         <>
             {loading && (
                 <div className="w-full fixed top-20 flex justify-center z-20">
-                    <div className="w-52 border border-slate-600 bg-black flex gap-2 p-3">
+                    <div className="w-52 border border-slate-600 bg-[#F7F7F7]  dark:bg-[#181818] flex gap-2 p-3">
                         <Spinner />
-                        <span className="text-md font-bold text-white">
+                        <span className="text-md font-bold text-black dark:text-white">
                              wait...
                         </span>
                     </div>

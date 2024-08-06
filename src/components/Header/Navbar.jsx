@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Search, Button, Logo, SearchForSmallScreen } from "../index.js";
+import { Search, Button, Logo, SearchForSmallScreen,ToggleDarkMode } from "../index.js";
 import { Link } from "react-router-dom";
 import {
     IoCloseCircleOutline,
@@ -12,6 +12,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import { IoMdLogOut } from "react-icons/io";
 import { userLogout } from "../../store/Slices/authSlice.js";
+
 
 function Navbar() {
     const [toggleMenu, setToggleMenu] = useState(false);
@@ -42,7 +43,7 @@ function Navbar() {
 
     return (
         <>
-            <nav className="w-full bg-[#0E0F0F] flex justify-between items-center p-4 sm:gap-5 gap-2 border-b-2 border-gray-500 sticky top-0 z-50">
+            <nav className="w-full bg-[#F5F5F5] dark:bg-[#121212] flex justify-between items-center p-4 sm:gap-5 gap-2 border-b-2 border-gray-500 sticky top-0 z-50">
                 <div className="flex items-center justify-center gap-2 cursor-pointer">
                     <Logo />
                 </div>
@@ -53,7 +54,7 @@ function Navbar() {
                 </div>
 
                 {/* search for small screens */}
-                <div className="text-white w-full inline-flex justify-end sm:hidden pr-4">
+                <div className="text-black dark:text-white w-full inline-flex justify-end sm:hidden pr-4">
                     <CiSearch
                         size={30}
                         fontWeight={"bold"}
@@ -69,6 +70,7 @@ function Navbar() {
 
                 {/* login and signup buttons for larger screens */}
                 {authStatus ? (
+                      <div className="flex gap-2 ">
                     <div className="rounded-full sm:block hidden">
                         <img
                             src={profileImg}
@@ -76,24 +78,27 @@ function Navbar() {
                             className="rounded-full w-10 h-10 object-cover"
                         />
                     </div>
+                    <ToggleDarkMode />
+                  </div>
                 ) : (
                     <div className="space-x-2 sm:block hidden">
                         <Link to={"/login"}>
-                            <Button className="bg-[#222222] border hover:bg-black border-slate-500 sm:px-4 sm:py-2 p-2">
+                            <Button className="bg-[#DCDCDC] dark:bg-[#222222] border hover:bg-[#F7F7F7]  dark:bg-[#181818] border-slate-500 sm:px-4 sm:py-2 p-2">
                                 Login
                             </Button>
                         </Link>
                         <Link to={"/signup"}>
-                            <Button className="font-semibold border hover:bg-[#222222] border-slate-500 sm:px-4 sm:py-2 ">
+                            <Button className="font-semibold border hover:bg-[#DCDCDC] dark:bg-[#222222] border-slate-500 sm:px-4 sm:py-2 ">
                                 Sign up
                             </Button>
                         </Link>
+                        <ToggleDarkMode />
                     </div>
                 )}
 
                 {/* hamburger for smaller screens */}
                 <div className="sm:hidden block">
-                    <div className="text-white ">
+                    <div className="text-black dark:text-white ">
                         <SlMenu
                             size={24}
                             onClick={() => setToggleMenu((prev) => !prev)}
@@ -103,7 +108,7 @@ function Navbar() {
 
                 {/* Side bar for smaller screens */}
                 {toggleMenu && (
-                    <div className="fixed right-0 top-0 text-white flex flex-col border-l h-screen w-[70%] bg-[#0F0F0F] sm:hidden rounded-lg outline-none">
+                    <div className="fixed right-0 top-0 text-black dark:text-white flex flex-col border-l h-screen w-[70%] bg-[#E8E8E8] black:bg-[#1A1A1A] sm:hidden rounded-lg outline-none">
                         <div className="w-full border-b h-20 flex items-center mb-2 justify-between px-3">
                             <div className="flex items-center gap-2">
                                 <Logo />
@@ -136,11 +141,10 @@ function Navbar() {
                                     </NavLink>
                                 ))}
                             </div>
-
                             {!authStatus ? (
                                 <div className="flex flex-col space-y-5 mb-3">
                                     <Link to={"/login"}>
-                                        <Button className="w-full bg-[#222222] border hover:bg-white hover:text-black border-slate-500 py-1 px-3">
+                                        <Button className="w-full bg-[#DCDCDC] dark:bg-[#222222] border hover:bg-white hover:text-black border-slate-500 py-1 px-3">
                                             Login
                                         </Button>
                                     </Link>

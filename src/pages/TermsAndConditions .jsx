@@ -7,7 +7,7 @@ const TermsAndConditions = () => {
 
     return (
         <div className="container mx-auto flex justify-center items-center h-screen">
-            <div className="bg-black border border-slate-800 text-white rounded-lg p-8 shadow-lg">
+            <div className="bg-[#F7F7F7]  dark:bg-[#181818] border border-slate-800 text-black dark:text-white rounded-lg p-8 shadow-lg">
                 <div className="mb-5 ">
                     <Logo />
                 </div>
@@ -48,7 +48,7 @@ const TermsAndConditions = () => {
                     {isChecked && (
                         <Link
                             to="/"
-                            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+                            className="bg-blue-500 hover:bg-blue-600 text-black dark:text-white font-bold py-2 px-4 rounded"
                         >
                             Continue
                         </Link>

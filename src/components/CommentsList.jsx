@@ -47,7 +47,7 @@ function CommentsList({
 
     return (
         <>
-            <div className="text-white w-full flex justify-start items-center sm:gap-5 gap-3 border-b border-slate-600 p-3 sm:p-5">
+            <div className="text-black dark:text-white w-full flex justify-start items-center sm:gap-5 gap-3 border-b border-slate-600 p-3 sm:p-5">
                 <div className="w-12">
                     <img
                         src={avatar || avatar2}
@@ -57,7 +57,7 @@ function CommentsList({
                 <div className="w-full flex flex-col gap-1 relative">
                     <div className="flex items-center gap-2">
                         <h2 className="text-xs">{username}</h2>
-                        <span className="text-xs text-slate-400">
+                        <span className="text-xs text-slate-900 dark:text-slate-400">
                             {timeAgo(createdAt)}
                         </span>
                     </div>
@@ -67,7 +67,7 @@ function CommentsList({
                         <div className="absolute right-0">
                             <div className="relative">
                                 <HiOutlineDotsVertical
-                                    className="text-white cursor-pointer"
+                                    className="text-black dark:text-white cursor-pointer"
                                     onClick={() =>
                                         setEditState((prevState) => ({
                                             ...prevState,
@@ -77,7 +77,7 @@ function CommentsList({
                                 />
 
                                 {editState.isOpen && (
-                                    <div className="border bg-[#222222] text-lg border-slate-600 absolute text-center right-2 rounded-xl">
+                                    <div className="border bg-[#DCDCDC] dark:bg-[#222222] text-lg border-slate-600 absolute text-center right-2 rounded-xl">
                                         <ul>
                                             <li
                                                 className="hover:opacity-50 px-5 cursor-pointer border-b border-slate-600"

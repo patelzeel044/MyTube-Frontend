@@ -1,7 +1,7 @@
 import React from "react";
 
 function HomeSkeleton() {
-    const loadingSkeletonStyle = "animate-pulse bg-[#222222] h-10 w-full mb-2";
+    const loadingSkeletonStyle = "animate-pulse bg-[#DCDCDC] dark:bg-[#222222] h-10 w-full mb-2";
     return (
         <>
             <div className="w-full grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">

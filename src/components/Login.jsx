@@ -36,7 +36,7 @@ function Login() {
 
     return (
         <>
-            <div className="w-full h-screen text-white p-3 flex justify-center items-start">
+            <div className="w-full h-screen text-black dark:text-white p-3 flex justify-center items-start">
                 <div className="flex max-w-5xl flex-col space-y-5 justify-center items-center border border-slate-600 p-3 mt-20">
                     <div className="flex items-center gap-2 mt-5">
                         <Logo />

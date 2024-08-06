@@ -39,7 +39,7 @@ export function DDMMYYYY(timestamp) {
 
     // Extract day, month, and year components from the Date object
     const day = date.getUTCDate().toString().padStart(2, '0');
-    const month = (date.getUTCMonth() + 1).toString().padStart(2, '0'); // Note: getUTCMonth() returns 0 for January, so we add 1
+    const month = (date.getUTCMonth() + 1).toString().padStart(2, '0'); // getUTCMonth() returns 0 for January, so add 1
     const year = date.getUTCFullYear();
 
     // Form the dd/mm/yyyy format string

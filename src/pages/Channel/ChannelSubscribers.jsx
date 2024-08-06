@@ -17,14 +17,14 @@ function ChannelSubscribers() {
     return (
         <>
         <div 
-        className="flex border-b-2 border-slate-500 px-3 py-1 justify-between font-extrabold items-center text-white"
+        className="flex border-b-2 border-slate-500 px-3 py-1 justify-between font-extrabold items-center text-black dark:text-white"
         >
             Subscribers : {totalSubscribers}
         </div>
             {subscribers?.map((subscriber) => (
                 <Link
                     key={subscriber?._id}
-                    className="flex border-b border-slate-500 px-3 py-1 justify-between items-center text-white"
+                    className="flex border-b border-slate-500 px-3 py-1 justify-between items-center text-black dark:text-white"
                 >
                     <div className="flex gap-3 items-center">
                         <Avatar

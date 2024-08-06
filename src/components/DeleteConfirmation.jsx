@@ -4,9 +4,9 @@ import { ImBin } from "./icons.js";
 function DeleteConfirmation({ onCancel, onDelete, comment, tweet, video }) {
     return (
         <>
-            <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-70 z-50">
+            <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-[#F7F7F7]  dark:bg-[#181818] bg-opacity-70 z-50">
                 <div className="fixed inset-0 flex items-center justify-center z-50">
-                    <div className="text-center sm:p-5 p-3 bg-black border-slate-700 border rounded-xl">
+                    <div className="text-center sm:p-5 p-3 bg-[#F7F7F7]  dark:bg-[#181818] border-slate-700 border rounded-xl">
                         <div className="flex justify-center items-start p-3 flex-wrap gap-2 ">
                             <ImBin
                                 color="red"
@@ -37,7 +37,7 @@ function DeleteConfirmation({ onCancel, onDelete, comment, tweet, video }) {
                         <div className="font-normal flex gap-2 justify-center">
                             <button
                                 onClick={onCancel}
-                                className="bg-[#222222] py-1 px-3  rounded-lg sm:text-lg text-sm hover:bg-black cursor-pointer"
+                                className="bg-[#DCDCDC] dark:bg-[#222222] py-1 px-3  rounded-lg sm:text-lg text-sm hover:bg-[#F7F7F7]  dark:bg-[#181818] cursor-pointer"
                             >
                                 Cancel
                             </button>

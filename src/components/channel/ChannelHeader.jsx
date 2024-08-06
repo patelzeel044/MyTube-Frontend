@@ -38,7 +38,7 @@ function ChannelHeader({
 
     return (
         <>
-            <div className="w-full text-white">
+            <div className="w-full text-black dark:text-white">
                 {/* coverImage section */}
                 <section className="w-full">
                     {coverImage ? (
@@ -57,7 +57,7 @@ function ChannelHeader({
                             )}
                         </div>
                     ) : (
-                        <div className="sm:h-40 h-28 w-full border-slate-600 border-b bg-black"></div>
+                        <div className="sm:h-40 h-28 w-full border-slate-600 border-b bg-[#F7F7F7]  dark:bg-[#181818]"></div>
                     )}
                 </section>
                 {/*channel details section  */}
@@ -78,16 +78,16 @@ function ChannelHeader({
                     <div className="w-full md:h-24 sm:h-20 flex justify-between items-start px-1">
                         <div>
                             <h1 className="text-xl font-bold">{fullName}</h1>
-                            <h3 className="text-sm text-slate-400">
+                            <h3 className="text-sm text-slate-900 dark:text-slate-400">
                                 @{username}
                             </h3>
                             <div className="flex gap-1">
-                                <p className="text-xs text-slate-400">
+                                <p className="text-xs text-slate-900 dark:text-slate-400">
                                     {localSubscribersCount &&
                                         localSubscribersCount}{" "}
                                     Subscribers
                                 </p>
-                                <p className="text-xs text-slate-400">
+                                <p className="text-xs text-slate-900 dark:text-slate-400">
                                     {subscribedCount && subscribedCount}{" "}
                                     Subscribed
                                 </p>

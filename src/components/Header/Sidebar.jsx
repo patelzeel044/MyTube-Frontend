@@ -81,7 +81,7 @@ function Sidebar() {
     return (
         <>
             <div className="sm:block hidden">
-                <div className="text-white lg:w-56 md:w-44 w-16 sm:p-3 p-2 border-slate-600 border-r h-screen flex flex-col justify-between">
+                <div className="text-black dark:text-white lg:w-56 md:w-44 w-16 sm:p-3 p-2 border-slate-600 border-r h-screen flex flex-col justify-between">
                     <div className="flex flex-col gap-4 mt-5">
                         {sidebarTopItems.map((item) => (
                             <NavLink
@@ -124,7 +124,7 @@ function Sidebar() {
             </div>
 
             {/* for mobile sidebar is bottom bar*/}
-            <div className="border-t-2 text-white h-16 sm:hidden z-20 p-1 w-full flex justify-around fixed bottom-0 bg-[#0E0F0F]">
+            <div className="border-t-2 text-black dark:text-white h-16 sm:hidden z-20 p-1 w-full flex justify-around fixed bottom-0 bg-[#F5F5F5] dark:bg-[#121212]">
                 {bottomBarItems.map((item) => (
                     <NavLink
                         to={item.url}
