@@ -70,7 +70,7 @@ function Navbar() {
 
                 {/* login and signup buttons for larger screens */}
                 {authStatus ? (
-                      <div className="flex gap-2 ">
+                      <div className="flex gap-2">
                     <div className="rounded-full sm:block hidden">
                         <img
                             src={profileImg}
@@ -81,21 +81,23 @@ function Navbar() {
                     <ToggleDarkMode />
                   </div>
                 ) : (
+                    <div className="flex gap-2">
                     <div className="space-x-2 sm:block hidden">
                         <Link to={"/login"}>
-                            <Button className="bg-[#DCDCDC] dark:bg-[#222222] border hover:bg-[#F7F7F7]  dark:bg-[#181818] border-slate-500 sm:px-4 sm:py-2 p-2">
+                            <Button className="bg-[#DCDCDC] dark:bg-[#222222] border border-slate-500 sm:px-4 sm:py-2 p-2">
                                 Login
                             </Button>
                         </Link>
                         <Link to={"/signup"}>
-                            <Button className="font-semibold border hover:bg-[#DCDCDC] dark:bg-[#222222] border-slate-500 sm:px-4 sm:py-2 ">
+                            <Button className="font-semibold border bg-[#DCDCDC] dark:bg-[#222222] border-slate-500 sm:px-4 sm:py-2 ">
                                 Sign up
                             </Button>
                         </Link>
-                        <ToggleDarkMode />
+                    </div>
+                        <ToggleDarkMode /> 
                     </div>
                 )}
-
+                    
                 {/* hamburger for smaller screens */}
                 <div className="sm:hidden block">
                     <div className="text-black dark:text-white ">
@@ -108,8 +110,8 @@ function Navbar() {
 
                 {/* Side bar for smaller screens */}
                 {toggleMenu && (
-                    <div className="fixed right-0 top-0 text-black dark:text-white flex flex-col border-l h-screen w-[70%] bg-[#E8E8E8] black:bg-[#1A1A1A] sm:hidden rounded-lg outline-none">
-                        <div className="w-full border-b h-20 flex items-center mb-2 justify-between px-3">
+                    <div className="fixed right-0 top-0 text-black dark:text-white flex flex-col border-l h-screen w-[70%] bg-[#E8E8E8] dark:bg-[#1A1A1A] sm:hidden rounded-lg outline-none">
+                        <div className="w-full border-b border-gray-500 h-20 flex items-center mb-2 justify-between px-3">
                             <div className="flex items-center gap-2">
                                 <Logo />
                             </div>
@@ -144,12 +146,12 @@ function Navbar() {
                             {!authStatus ? (
                                 <div className="flex flex-col space-y-5 mb-3">
                                     <Link to={"/login"}>
-                                        <Button className="w-full bg-[#DCDCDC] dark:bg-[#222222] border hover:bg-white hover:text-black border-slate-500 py-1 px-3">
+                                        <Button className="w-full bg-[#DCDCDC] dark:bg-[#222222] border  border-slate-500 py-1 px-3">
                                             Login
                                         </Button>
                                     </Link>
                                     <Link to={"/signup"}>
-                                        <Button className=" w-full font-semibold border border-slate-500 hover:bg-white hover:text-black py-1 px-3">
+                                        <Button className=" w-full bg-[#DCDCDC] dark:bg-[#222222] font-semibold border border-slate-500 py-1 px-3">
                                             Sign up
                                         </Button>
                                     </Link>
